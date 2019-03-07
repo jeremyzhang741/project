@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Result</title>
+    <style>
+        body {
+            background-color:aliceblue;
+        }
+        h1 {
+            font-size:50px;
+            color:#cc0066;
+            text-align:center;
+        }
+        h2 {
+            font-size:40px;
+            color:#8e0811;
+            margin-top:5%;
+            text-align: center;
+        }
+        h3{
+            text-align:center;
+        }
+        #back{
+            margin-left: 5%;
+            margin-top:5%;
+        }
+
+        #first {
+            margin-left: 31%;
+        }
+        a {
+            font-size: 20px;
+        }
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/main" class="back_to_home" id="back" method="get">
+        <input type="submit" value="Back">
+    </form>
+
+    <div>
+        <h1>Search Result</h1>
+        <h2>The wine you may want to find: </h2>
+    </div>
+    <div style="text-align: center;">
+        Name:{{name_1}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:{{name_2}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Variety:{{ name_3 }}
+    </div>
+    <div style="text-align: center;">
+        Description:{{ description }}
+    </div>
+    <div class="img" style="text-align: center;">
+        <p>
+            <img src='{{ url }}'/>
+        </p>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <a href="/main/prediction" target="_blank"  id="first">Prediction</a>&nbsp;&nbsp;
+    <a href="/main/rankRetrieve" target="_blank" >Rank retrieve</a>&nbsp;&nbsp;
+    <!--<a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;-->
+    <a href="/main/comments" target="_blank">Comments</a>&nbsp;&nbsp;
+        <a href="/main/search" target="_blank">fuzzy matching</a>&nbsp;
+    </div>
+</body>
+</html>

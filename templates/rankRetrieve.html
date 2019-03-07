@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Rank Retrieve</title>
+    <style>
+        body {
+            background-color:aliceblue;
+        }
+        h1 {
+            font-size:50px;
+            color:#cc0066;
+            text-align:center;
+        }
+        h2 {
+            font-size:30px;
+            color:#8e0811;
+            margin-top:5%;
+            text-align: center;
+        }
+        #back{
+            margin-left: 5%;
+            margin-top:5%;
+        }
+         #first {
+            margin-left: 37%;
+        }
+
+        a {
+            font-size: 20px;
+        }
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/main" class="back_to_home" id="back" method="get">
+        <input type="submit" value="Back">
+    </form>
+
+
+    <h1>Rank Retrieve</h1>
+    <h2>Please input the relative attributes of Rank: </h2>
+    <!-- submit the search input to Rank function-->
+    <div style="text-align: center;">
+        <form action="/main/rank_result" autocomplete="off" id="rankR">
+            Variety: <input type="text" name="variety"  size="50" value="White Blend"><br>
+            Country: <input type="text" name="country"  size="50" value="Italy"><br>
+            Price: <input type="text" name="price"  size="50" value="50"><br>
+            Top: <input type="number" name="top"  size="50" value="10" max="100" min="1"><br><br>
+            <input type="submit" class="function_5" value="Retrieve" >&nbsp;&nbsp;&nbsp;&nbsp;
+
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+    <a href="/main/prediction" target="_blank" id="first">Prediction</a>&nbsp;&nbsp;
+
+    <!--<a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;-->
+    <a href="/main/comments" target="_blank">Comments</a>&nbsp;&nbsp;
+        <a href="/main/search" target="_blank">fuzzy matching</a>&nbsp;&nbsp;
+
+    </div>
+</body>
+</html>

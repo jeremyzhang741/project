@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Description Search_step2</title>
+    <style>
+        body {
+            background-color:aliceblue;
+        }
+        h1 {
+            font-size:50px;
+            color:#cc0066;
+            text-align:center;
+        }
+        h2 {
+            font-size:40px;
+            color:#8e0811;
+            margin-top:5%;
+            text-align: center;
+        }
+        h3{
+            text-align:center;
+        }
+        #back{
+            margin-left: 5%;
+            margin-top:5%;
+        }
+        #first {
+            margin-left: 31%;
+        }
+
+        a {
+            font-size: 20px;
+        }
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/main" class="back_to_home" id="back" method="get">
+        <input type="submit" value="Back">
+    </form>
+
+
+    <div>
+        <h1>Description Search</h1>
+        <h2>Next, please select its attributes you are familiar with: </h2>
+    </div>
+    <form action="/main/match_result" class="search" method="get" style="margin-left:38%">
+        Palate:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flavor:<br/>
+        smooth:<input type="checkbox"  name="Palate" value="smooth" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        berry:<input type="checkbox"  name="Flavor" value="berry" />
+        <br />
+        acidity:<input type="checkbox"  name="Palate" value="acidity" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        lime:<input type="checkbox"  name="Flavor" value="lime" />
+        <br />
+        spicy:<input type="checkbox"  name="Palate" value="spicy" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        pineapple:<input type="checkbox"  name="Flavor" value="pineapple" />
+        <br />
+        tight:<input type="checkbox"  name="Palate" value="tight" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        lemon:<input type="checkbox"  name="Flavor" value="lemon" />
+        <br />
+        crisp:<input type="checkbox"  name="Palate" value="crisp" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        orange:<input type="checkbox"  name="Flavor" value="orange" />
+        <br />
+        dry:<input type="checkbox"  name="Palate" value="dry" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        blackberry:<input type="checkbox"  name="Flavor" value="blackberry" />
+        <br />
+        soft:<input type="checkbox"  name="Palate" value="tight" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        peach:<input type="checkbox"  name="Flavor" value="peach" />
+        <br />
+        creamy:<input type="checkbox"  name="Palate" value="creamy" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        apple:<input type="checkbox"  name="Flavor" value="apple" />
+        <br />
+        light:<input type="checkbox"  name="Palate" value="light" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        vanilla:<input type="checkbox"  name="Flavor" value="vanilla" />
+        <br />
+        sweet:<input type="checkbox"  name="Palate" value="sweet" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        blackcurrant:<input type="checkbox"  name="Flavor" value="blackcurrant" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        pear:<input type="checkbox"  name="Flavor" value="pear" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        cherry:<input type="checkbox"  name="Flavor" value="cherry" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        plum:<input type="checkbox"  name="Flavor" value="plum" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        honey:<input type="checkbox"  name="Flavor" value="honey" />
+        <br />
+        <input type="submit" value="Submit" style="margin-left: 4%">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="reset">
+        </form>
+    <br>
+    <br>
+    <br>
+    <br>
+        <div>
+            <a href="/main/prediction" target="_blank"  id="first">Prediction</a>&nbsp;&nbsp;
+    <a href="/main/rankRetrieve" target="_blank" style="margin-left:1%;" >Rank retrieve</a>&nbsp;&nbsp;
+    <!--<a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;-->
+    <a href="/main/comments" target="_blank">Comments</a>&nbsp;&nbsp;
+            <a href="/main/search" target="_blank">fuzzy matching</a>&nbsp;
+    </div>
+
+</body>
+</html>

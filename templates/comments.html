@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments review</title>
+    <style>
+        body {
+            background-color:aliceblue;
+        }
+        h1 {
+            font-size:50px;
+            color:#cc0066;
+            text-align:center;
+        }
+        h2 {
+            font-size:40px;
+            color:#8e0811;
+            margin-top:1%;
+            text-align: center;
+        }
+        #back{
+            margin-left: 5%;
+            margin-top:1%;
+        }
+        #comments {
+            
+            font-size:20px;
+            color: black;
+            text-align: center;
+        }
+        #add_comment {
+            text-align: center;
+        }
+
+        a {
+            font-size: 20px;
+
+        }
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+</style>
+
+</head>
+<body>
+    <form action="/main" class="back_to_home" id="back" method="get">
+        <input type="submit" value="Back">
+    </form>
+
+
+    <h1>Comments review</h1>
+    <h2>Please select one wine to review its comments: </h2>
+    <!-- submit the search input to prediction function-->
+    <form action='/main/comments/reviews' autocomplete="off" id="comments">
+        Name:<br>
+        <input type="text" name="name"  size="50" value="Fattoria La Rivolta 2015 Taburno Fiano (Sannio)">
+        <br>
+        <input type="submit" class="function_3" value="Review" >&nbsp;&nbsp;&nbsp;&nbsp;
+
+    </form>
+    <h2 style="margin-top:1%">You can add your comment below:</h2>
+    <form action="/main/comments/add_comment" autocomplete="off" id="add_comment">
+        Name:<br>
+        <input type="text" name="name"  size="50" value="Fattoria La Rivolta 2015 Taburno Fiano (Sannio)"><br>
+        <input type="radio" name="points" value="1">1
+        <input type="radio" name="points" value="2">2
+        <input type="radio" name="points" value="3">3
+        <input type="radio" name="points" value="4">4
+        <input type="radio" name="points" value="5">5</br>
+        Comment:<br>
+        <input type="text" name="comments" style="width:500px;height:350px">
+        <br>
+        <input type="submit" value="Add">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Reset">
+
+    </form>
+    <div style="text-align: center;">
+    <a href="/main/prediction" target="_blank"  id="first">Prediction</a>&nbsp;&nbsp;
+    <a href="/main/rankRetrieve" target="_blank">Rank retrieve</a>&nbsp;&nbsp;
+        <a href="/main/search" target="_blank">fuzzy matching</a>&nbsp;&nbsp;
+    <!-- <a href="/comments" target="_blank">Comments</a>&nbsp;&nbsp; -->
+    </div>
+</body>
+</html>
